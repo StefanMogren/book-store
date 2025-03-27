@@ -26,6 +26,7 @@
 
 .header__logo {
 	aspect-ratio: 1;
+	cursor: pointer;
 	background-color: white;
 }
 
@@ -53,12 +54,11 @@
 	background-color: white;
 }
 
-.main {
-}
-
 .main__book-list {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
 	gap: 1rem;
 }
 
