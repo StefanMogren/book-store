@@ -1,6 +1,6 @@
 function Logo() {
 	return (
-		<div>Logo</div>
+		<div className='header__logo'>Logo</div>
 		// <img src="" alt="" />
 	);
 }

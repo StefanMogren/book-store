@@ -1,9 +1,9 @@
 function Cart() {
 	return (
-		<div className='header__cart'>
+		<button className='header__cart-button'>
 			Cart
-			<button className='header__cart-button'></button>
-		</div>
+			<div className='header__cart-counter'>0</div>
+		</button>
 	);
 }
 
