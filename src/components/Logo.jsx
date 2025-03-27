@@ -1,7 +1,13 @@
+import React from 'react';
+import mainLogo from '../assets/books.jpg';
+
 function Logo() {
 	return (
-		<div className='header__logo'>Logo</div>
-		// <img src="" alt="" />
+		<img
+			className='header__logo'
+			src={mainLogo}
+			alt='Hög med böcker, logga'
+		/>
 	);
 }
 
