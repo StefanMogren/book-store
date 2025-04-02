@@ -1,6 +1,7 @@
 import users from '../data/users';
 
 function LoginForm({ setUserLogin }) {
+	// Loginkontrollen
 	const checkLogin = (event) => {
 		event.preventDefault();
 		const formElements = event.target.elements;
@@ -10,6 +11,7 @@ function LoginForm({ setUserLogin }) {
 			password: formElements.password.value,
 		};
 
+		// Kontrollerar ifall loginuppgifterna matchar befintlig användare.
 		users.forEach((user) => {
 			if (
 				user.username === loginUser.username &&
@@ -23,6 +25,7 @@ function LoginForm({ setUserLogin }) {
 		console.log('I got submitted!');
 	};
 
+	// Vad som returneras
 	return (
 		<main className='login'>
 			<h1 className='login__title'>Login</h1>

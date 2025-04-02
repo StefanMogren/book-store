@@ -10,7 +10,7 @@ function App() {
 	return (
 		<div className='app'>
 			{activeUser ? (
-				<BookStore />
+				<BookStore setUserLogin={setUserLogin} />
 			) : (
 				<LoginForm setUserLogin={setUserLogin} />
 			)}
