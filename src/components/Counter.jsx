@@ -1,11 +1,37 @@
 import { useState } from 'react';
 
-function Counter() {
+function Counter({ setCartAmount }) {
+	const [bookAmount, setBookAmount] = useState(0);
+
+	const addBook = () => {
+		setBookAmount((prevState) => prevState + 1);
+		setCartAmount((prevState) => prevState + 1);
+	};
+
+	const removeBook = () => {
+		if (bookAmount > 0) {
+			setBookAmount((prevState) => prevState - 1);
+			setCartAmount((prevState) => prevState - 1);
+		}
+	};
+
 	return (
 		<section className='main__counter-container'>
-			<button className='main__counter-btn'>-</button>
-			<p className='main__counter-count'>0</p>
-			<button className='main__counter-btn'>+</button>
+			<button
+				className='main__counter-btn'
+				onClick={() => {
+					removeBook();
+				}}>
+				-
+			</button>
+			<p className='main__counter-count'>{bookAmount}</p>
+			<button
+				className='main__counter-btn'
+				onClick={() => {
+					addBook();
+				}}>
+				+
+			</button>
 		</section>
 	);
 }
