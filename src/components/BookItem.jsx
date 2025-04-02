@@ -1,3 +1,5 @@
+import Counter from './Counter';
+
 function BookItem({ setCartAmount, title, author, description }) {
 	const addToCart = () => {
 		setCartAmount((prevState) => Number(prevState) + 1);
@@ -8,9 +10,10 @@ function BookItem({ setCartAmount, title, author, description }) {
 			<h2 className='main__book-title'>{title}</h2>
 			<h3 className='main__book-author'>Av {author}</h3>
 			<p className='main__book-description'>{description}</p>
-			<button className='main__book-add-cart-button' onClick={addToCart}>
+			<Counter />
+			{/* <button className='main__book-add-cart-button' onClick={addToCart}>
 				Add to cart
-			</button>
+			</button> */}
 		</li>
 	);
 }
