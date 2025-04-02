@@ -1,10 +1,34 @@
-import React from 'react';
+import users from '../data/users';
 
-function LoginForm() {
+function LoginForm({ setUserLogin }) {
+	const checkLogin = (event) => {
+		event.preventDefault();
+		const formElements = event.target.elements;
+
+		const loginUser = {
+			username: formElements.username.value,
+			password: formElements.password.value,
+		};
+
+		users.forEach((user) => {
+			if (
+				user.username === loginUser.username &&
+				user.password === loginUser.password
+			) {
+				console.log(`User ${user.username} logs in!`);
+				setUserLogin(user.username);
+			}
+		});
+
+		console.log('I got submitted!');
+	};
+
 	return (
 		<main className='login'>
 			<h1 className='login__title'>Login</h1>
-			<form className='login__form'>
+			<form
+				className='login__form'
+				onSubmit={(event) => checkLogin(event)}>
 				<label className='login__label' htmlFor='username'>
 					<span className='login__label-text'>Username</span>
 					<input
