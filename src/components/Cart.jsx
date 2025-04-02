@@ -2,7 +2,7 @@ function Cart() {
 	return (
 		<button className='header__cart-button'>
 			Cart
-			<div className='header__cart-counter'>0</div>
+			<span className='header__cart-counter'>0</span>
 		</button>
 	);
 }

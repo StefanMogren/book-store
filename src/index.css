@@ -97,3 +97,7 @@
 	color: white;
 	background-color: cadetblue;
 }
+
+.main__book-add-cart-button:active {
+	background-color: rgb(49, 125, 128);
+}
