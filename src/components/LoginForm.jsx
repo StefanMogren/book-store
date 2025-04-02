@@ -1,4 +1,5 @@
 import users from '../data/users';
+import Input from './Input';
 
 function LoginForm({ setUserLogin }) {
 	// Loginkontrollen
@@ -21,8 +22,6 @@ function LoginForm({ setUserLogin }) {
 				setUserLogin(user.username);
 			}
 		});
-
-		console.log('I got submitted!');
 	};
 
 	// Vad som returneras
@@ -32,24 +31,28 @@ function LoginForm({ setUserLogin }) {
 			<form
 				className='login__form'
 				onSubmit={(event) => checkLogin(event)}>
-				<label className='login__label' htmlFor='username'>
-					<span className='login__label-text'>Username</span>
-					<input
-						type='text'
-						name='username'
-						className='login__input'
-						id='username'
-					/>
-				</label>
-				<label className='login__label' htmlFor='password'>
-					<span className='login__label-text'>Password</span>
-					<input
-						type='text'
-						name='password'
-						className='login__input'
-						id='password'
-					/>
-				</label>
+				<Input
+					inputType='text'
+					inputName='username'
+					inputId='username'
+					// inputValue=
+					inputClass='login__input'
+					inputRequired='required'
+					labelClass='login__label'
+					labelText='Username'
+					spanClass='login__label-text'
+				/>
+				<Input
+					inputType='text'
+					inputName='password'
+					inputId='password'
+					// inputValue=
+					inputClass='login__input'
+					inputRequired='required'
+					labelClass='login__label'
+					labelText='Password'
+					spanClass='login__label-text'
+				/>
 				<button className='login__button'>Login</button>
 				<p>Don't have an account? Sign up</p>
 			</form>
