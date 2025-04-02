@@ -1,11 +1,11 @@
 import Cart from './Cart';
 import Logo from './Logo';
 
-function Header() {
+function Header({ cartAmount }) {
 	return (
 		<header className='header'>
 			<Logo />
-			<Cart />
+			<Cart cartAmount={cartAmount} />
 		</header>
 	);
 }

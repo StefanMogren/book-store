@@ -1,8 +1,8 @@
-function Cart() {
+function Cart({ cartAmount }) {
 	return (
 		<button className='header__cart-button'>
 			Cart
-			<span className='header__cart-counter'>0</span>
+			<span className='header__cart-counter'>{cartAmount}</span>
 		</button>
 	);
 }

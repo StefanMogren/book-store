@@ -1,9 +1,9 @@
 import BookList from './BookList';
 
-function Main() {
+function Main({ setCartAmount }) {
 	return (
 		<main className='main'>
-			<BookList />
+			<BookList setCartAmount={setCartAmount} />
 		</main>
 	);
 }
