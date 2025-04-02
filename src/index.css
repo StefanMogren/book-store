@@ -127,3 +127,43 @@
 .main__counter-btn:active {
 	background-color: rgb(145, 145, 145);
 }
+
+.login {
+	width: 250px;
+	margin: auto;
+	display: flex;
+	gap: 1.5rem;
+	flex-direction: column;
+	color: white;
+}
+
+.login__title {
+	text-align: center;
+}
+
+.login__form {
+	display: flex;
+	gap: 1.5rem;
+	flex-direction: column;
+}
+
+.login__label {
+	display: flex;
+	flex-direction: column;
+	gap: 0.2rem;
+}
+
+.login__input {
+	font-size: 1rem;
+	padding: 0.5rem;
+}
+
+.login__button {
+	padding: 0.5rem 0;
+	border: none;
+	border-radius: 10px;
+	font-weight: 600;
+}
+
+.login__label-text {
+}
