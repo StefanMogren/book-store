@@ -1,11 +1,20 @@
 import LoginForm from './components/LoginForm';
 import BookStore from './components/BookStore';
+import { useState } from 'react';
 
 function App() {
-	let activeUser = null;
+	const [userLogin, setUserLogin] = useState(null);
+
+	let activeUser = userLogin;
 
 	return (
-		<div className='app'>{activeUser ? <BookStore /> : <LoginForm />}</div>
+		<div className='app'>
+			{activeUser ? (
+				<BookStore />
+			) : (
+				<LoginForm setUserLogin={setUserLogin} />
+			)}
+		</div>
 	);
 }
 
