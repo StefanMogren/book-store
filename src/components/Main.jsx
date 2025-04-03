@@ -1,9 +1,11 @@
 import BookList from './BookList';
 
-export default function Main({ setCartAmount }) {
+function Main({ setCartAmount }) {
 	return (
 		<main className='main'>
 			<BookList setCartAmount={setCartAmount} />
 		</main>
 	);
 }
+
+export default Main;

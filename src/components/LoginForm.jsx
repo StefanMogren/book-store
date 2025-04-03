@@ -1,7 +1,7 @@
 import users from '../data/users';
 import Input from './Input';
 
-export default function LoginForm({ setUserLogin, setLoginOrRegister }) {
+function LoginForm({ setUserLogin, setLoginOrRegister }) {
 	// Loginkontrollen
 	const checkLogin = (event) => {
 		event.preventDefault();
@@ -63,3 +63,4 @@ export default function LoginForm({ setUserLogin, setLoginOrRegister }) {
 		</>
 	);
 }
+export default LoginForm;

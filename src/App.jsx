@@ -2,7 +2,7 @@ import NoUser from './components/NoUser';
 import BookStore from './components/BookStore';
 import { useState } from 'react';
 
-export default function App() {
+function App() {
 	const [userLogin, setUserLogin] = useState(null);
 
 	let activeUser = userLogin;
@@ -17,3 +17,5 @@ export default function App() {
 		</div>
 	);
 }
+
+export default App;

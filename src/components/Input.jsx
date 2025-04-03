@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Input({
+function Input({
 	inputType,
 	inputName,
 	inputClass,
@@ -25,3 +25,5 @@ export default function Input({
 		</label>
 	);
 }
+
+export default Input;

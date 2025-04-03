@@ -2,7 +2,7 @@ import Header from './Header';
 import Main from './Main';
 import { useState } from 'react';
 
-export default function BookStore({ setUserLogin }) {
+function BookStore({ setUserLogin }) {
 	const [cartAmount, setCartAmount] = useState(0);
 
 	return (
@@ -12,3 +12,5 @@ export default function BookStore({ setUserLogin }) {
 		</>
 	);
 }
+
+export default BookStore;

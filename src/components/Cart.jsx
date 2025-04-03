@@ -1,4 +1,4 @@
-export default function Cart({ cartAmount }) {
+function Cart({ cartAmount }) {
 	return (
 		<button className='header__cart-button'>
 			Cart
@@ -6,3 +6,5 @@ export default function Cart({ cartAmount }) {
 		</button>
 	);
 }
+
+export default Cart;

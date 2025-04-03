@@ -1,11 +1,6 @@
 import Counter from './Counter';
 
-export default function BookItem({
-	setCartAmount,
-	title,
-	author,
-	description,
-}) {
+function BookItem({ setCartAmount, title, author, description }) {
 	return (
 		<li className='main__book-item'>
 			<h2 className='main__book-title'>{title}</h2>
@@ -18,3 +13,5 @@ export default function BookItem({
 		</li>
 	);
 }
+
+export default BookItem;

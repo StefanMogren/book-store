@@ -1,7 +1,7 @@
 import React from 'react';
 import Input from './Input';
 
-export default function RegisterForm({ setLoginOrRegister }) {
+function RegisterForm({ setLoginOrRegister }) {
 	const registerUser = (event) => {
 		event.preventDefault();
 		console.log('New user registered!');
@@ -45,3 +45,5 @@ export default function RegisterForm({ setLoginOrRegister }) {
 		</>
 	);
 }
+
+export default RegisterForm;

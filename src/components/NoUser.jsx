@@ -2,7 +2,7 @@ import { useState } from 'react';
 import LoginForm from './LoginForm';
 import RegisterForm from './RegisterForm';
 
-export default function NoUser({ setUserLogin }) {
+function NoUser({ setUserLogin }) {
 	const [loginOrRegister, setLoginOrRegister] = useState(true);
 	return (
 		<main className='login'>
@@ -17,3 +17,5 @@ export default function NoUser({ setUserLogin }) {
 		</main>
 	);
 }
+
+export default NoUser;

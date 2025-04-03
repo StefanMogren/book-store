@@ -1,7 +1,7 @@
 import React from 'react';
 import mainLogo from '../assets/books.jpg';
 
-export default function Logo() {
+function Logo() {
 	return (
 		<img
 			className='header__logo'
@@ -10,3 +10,5 @@ export default function Logo() {
 		/>
 	);
 }
+
+export default Logo;
