@@ -1,8 +1,8 @@
 import React from 'react';
 
-function LogOut({ setUserLogin }) {
+function LogOut({ userLogin, setUserLogin }) {
 	const logOutUser = () => {
-		console.log('User logged out!');
+		console.log(`User ${userLogin} logged out!`);
 
 		setUserLogin(null);
 	};
@@ -12,7 +12,8 @@ function LogOut({ setUserLogin }) {
 			<button
 				className='header__log-out-btn'
 				onClick={() => logOutUser()}>
-				Log out
+				<span>Log out</span>
+				<span>{userLogin}</span>
 			</button>
 		</>
 	);

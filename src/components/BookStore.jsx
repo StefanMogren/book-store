@@ -2,12 +2,16 @@ import Header from './Header';
 import Main from './Main';
 import { useState } from 'react';
 
-function BookStore({ setUserLogin }) {
+function BookStore({ userLogin, setUserLogin }) {
 	const [cartAmount, setCartAmount] = useState(0);
 
 	return (
 		<>
-			<Header cartAmount={cartAmount} setUserLogin={setUserLogin} />
+			<Header
+				cartAmount={cartAmount}
+				userLogin={userLogin}
+				setUserLogin={setUserLogin}
+			/>
 			<Main setCartAmount={setCartAmount} />
 		</>
 	);

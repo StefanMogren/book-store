@@ -61,6 +61,8 @@
 
 .header__log-out-btn {
 	padding: 1rem 2rem;
+	display: flex;
+	flex-direction: column;
 	border: none;
 	border-radius: 10px;
 	font-weight: 600;

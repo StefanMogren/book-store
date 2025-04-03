@@ -1,19 +1,26 @@
 import NoUser from './components/NoUser';
 import BookStore from './components/BookStore';
 import { useState } from 'react';
+import users from './data/users';
 
 function App() {
+	const [allUsers, setAllUsers] = useState([]);
+	if (allUsers.length < 1) {
+		setAllUsers(users);
+	}
 	const [userLogin, setUserLogin] = useState(null);
 	// const []
 
-	let activeUser = userLogin;
-
 	return (
 		<div className='app'>
-			{activeUser ? (
-				<BookStore setUserLogin={setUserLogin} />
+			{userLogin ? (
+				<BookStore userLogin={userLogin} setUserLogin={setUserLogin} />
 			) : (
-				<NoUser setUserLogin={setUserLogin} />
+				<NoUser
+					setUserLogin={setUserLogin}
+					allUsers={allUsers}
+					setAllUsers={setAllUsers}
+				/>
 			)}
 		</div>
 	);

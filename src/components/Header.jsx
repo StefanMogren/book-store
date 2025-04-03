@@ -2,11 +2,11 @@ import Cart from './Cart';
 import Logo from './Logo';
 import LogOut from './LogOut';
 
-function Header({ cartAmount, setUserLogin }) {
+function Header({ cartAmount, userLogin, setUserLogin }) {
 	return (
 		<header className='header'>
 			<Logo />
-			<LogOut setUserLogin={setUserLogin} />
+			<LogOut userLogin={userLogin} setUserLogin={setUserLogin} />
 			<Cart cartAmount={cartAmount} />
 		</header>
 	);
