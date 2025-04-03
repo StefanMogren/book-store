@@ -1,7 +1,6 @@
-import users from '../data/users';
 import Input from './Input';
 
-function LoginForm({ setUserLogin, setLoginOrRegister }) {
+function LoginForm({ setUserLogin, setLoginOrRegister, allUsers }) {
 	// Loginkontrollen
 	const checkLogin = (event) => {
 		event.preventDefault();
@@ -13,7 +12,7 @@ function LoginForm({ setUserLogin, setLoginOrRegister }) {
 		};
 
 		// Kontrollerar ifall loginuppgifterna matchar befintlig användare.
-		users.forEach((user) => {
+		allUsers.forEach((user) => {
 			if (
 				user.username === loginUser.username &&
 				user.password === loginUser.password

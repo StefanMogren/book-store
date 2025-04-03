@@ -1,11 +1,34 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Input from './Input';
 
-function RegisterForm({ setLoginOrRegister }) {
+function RegisterForm({ setLoginOrRegister, allUsers, setAllUsers }) {
 	const registerUser = (event) => {
 		event.preventDefault();
-		console.log('New user registered!');
+		const formElements = event.target.elements;
+
+		const registerUser = {
+			username: formElements.username.value,
+			password: formElements.password.value,
+		};
+
+		console.log();
+
+		if (registerUser.username.length <= 3) {
+			console.log('Your username must be longer than three letters');
+		} else if (registerUser.password.length <= 3) {
+			console.log('Your password must be longer than three letters');
+		} else if (
+			allUsers.some((user) => user.username === registerUser.username)
+		) {
+			console.log(`User already exists!`);
+		} else {
+			setAllUsers([...allUsers, registerUser]);
+			console.log('New user registered!');
+		}
 	};
+	useEffect(() => {
+		console.log(allUsers);
+	}, [allUsers]);
 
 	return (
 		<>

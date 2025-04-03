@@ -9,7 +9,11 @@ function LogOut({ setUserLogin }) {
 
 	return (
 		<>
-			<button onClick={() => logOutUser()}>Log out</button>
+			<button
+				className='header__log-out-btn'
+				onClick={() => logOutUser()}>
+				Log out
+			</button>
 		</>
 	);
 }
