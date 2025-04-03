@@ -54,7 +54,9 @@ function LoginForm({ setUserLogin }) {
 					spanClass='login__label-text'
 				/>
 				<button className='login__button'>Login</button>
-				<p>Don't have an account? Sign up</p>
+				<p onClick={() => console.log('Signing up new user!')}>
+					Don't have an account? Sign up
+				</p>
 			</form>
 		</main>
 	);
