@@ -1,13 +1,14 @@
 import React from 'react';
+import Input from './Input';
 
-function RegisterForm() {
+function RegisterForm({ setLoginOrRegister }) {
 	const registerUser = (event) => {
 		event.preventDefault();
 		console.log('New user registered!');
 	};
 
 	return (
-		<main className='login'>
+		<>
 			<h1 className='login__title'>Register</h1>
 			<form
 				className='login__form'
@@ -16,7 +17,7 @@ function RegisterForm() {
 					inputType='text'
 					inputName='username'
 					inputId='username'
-					// inputValue=
+					// inputValue
 					inputClass='login__input'
 					inputRequired='required'
 					labelClass='login__label'
@@ -27,7 +28,7 @@ function RegisterForm() {
 					inputType='text'
 					inputName='password'
 					inputId='password'
-					// inputValue=
+					// inputValue
 					inputClass='login__input'
 					inputRequired='required'
 					labelClass='login__label'
@@ -35,9 +36,13 @@ function RegisterForm() {
 					spanClass='login__label-text'
 				/>
 				<button className='login__button'>Register</button>
-				<p>Already have an account? Log in</p>
+				<p
+					className='login__change-form'
+					onClick={() => setLoginOrRegister(true)}>
+					Already have an account? Log in
+				</p>
 			</form>
-		</main>
+		</>
 	);
 }
 

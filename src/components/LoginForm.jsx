@@ -1,7 +1,7 @@
 import users from '../data/users';
 import Input from './Input';
 
-function LoginForm({ setUserLogin }) {
+function LoginForm({ setUserLogin, setLoginOrRegister }) {
 	// Loginkontrollen
 	const checkLogin = (event) => {
 		event.preventDefault();
@@ -26,7 +26,7 @@ function LoginForm({ setUserLogin }) {
 
 	// Vad som returneras
 	return (
-		<main className='login'>
+		<>
 			<h1 className='login__title'>Login</h1>
 			<form
 				className='login__form'
@@ -54,11 +54,13 @@ function LoginForm({ setUserLogin }) {
 					spanClass='login__label-text'
 				/>
 				<button className='login__button'>Login</button>
-				<p onClick={() => console.log('Signing up new user!')}>
+				<p
+					className='login__change-form'
+					onClick={() => setLoginOrRegister(false)}>
 					Don't have an account? Sign up
 				</p>
 			</form>
-		</main>
+		</>
 	);
 }
 

@@ -1,4 +1,4 @@
-import LoginForm from './components/LoginForm';
+import NoUser from './components/NoUser';
 import BookStore from './components/BookStore';
 import { useState } from 'react';
 
@@ -12,7 +12,7 @@ function App() {
 			{activeUser ? (
 				<BookStore setUserLogin={setUserLogin} />
 			) : (
-				<LoginForm setUserLogin={setUserLogin} />
+				<NoUser setUserLogin={setUserLogin} />
 			)}
 		</div>
 	);
