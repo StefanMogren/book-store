@@ -1,7 +1,7 @@
 import BookItem from './BookItem';
 import books from '../data/books.json';
 
-function BookList({ setCartAmount }) {
+export default function BookList({ setCartAmount }) {
 	return (
 		<ul className='main__book-list'>
 			{books.map((book, index) => {
@@ -18,5 +18,3 @@ function BookList({ setCartAmount }) {
 		</ul>
 	);
 }
-
-export default BookList;

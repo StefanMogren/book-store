@@ -1,6 +1,6 @@
 import React from 'react';
 
-function LogOut({ setUserLogin }) {
+export default function LogOut({ setUserLogin }) {
 	const logOutUser = () => {
 		console.log('User logged out!');
 
@@ -13,5 +13,3 @@ function LogOut({ setUserLogin }) {
 		</>
 	);
 }
-
-export default LogOut;

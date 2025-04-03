@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function Counter({ setCartAmount }) {
+export default function Counter({ setCartAmount }) {
 	const [bookAmount, setBookAmount] = useState(0);
 
 	const addBook = () => {
@@ -35,5 +35,3 @@ function Counter({ setCartAmount }) {
 		</section>
 	);
 }
-
-export default Counter;
