@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Header from './Header';
 import { Outlet } from 'react-router-dom';
 import { useFetch } from '../hooks/useFetch';
 
@@ -7,8 +6,6 @@ function RootLayout() {
 	const [cartAmount, setCartAmount] = useState(0);
 	const [allUsers, setAllUsers] = useState([]);
 	const [userLogin, setUserLogin] = useState(true);
-
-	console.log(allUsers);
 
 	const {
 		data: books,
@@ -24,11 +21,11 @@ function RootLayout() {
 			{books && (
 				<Outlet
 					context={{
-						cartAmount,
-						setCartAmount,
 						books,
 						isLoading,
 						isError,
+						cartAmount,
+						setCartAmount,
 						allUsers,
 						setAllUsers,
 						userLogin,

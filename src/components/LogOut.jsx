@@ -1,6 +1,6 @@
-import React from 'react';
-
-function LogOut({ userLogin, setUserLogin }) {
+import { useOutletContext } from 'react-router-dom';
+function LogOut() {
+	const { userLogin, setUserLogin } = useOutletContext();
 	const logOutUser = () => {
 		console.log(`User ${userLogin} logged out!`);
 
