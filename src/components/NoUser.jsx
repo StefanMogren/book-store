@@ -2,22 +2,14 @@ import { useState } from 'react';
 import LoginForm from './LoginForm';
 import RegisterForm from './RegisterForm';
 
-function NoUser({ setUserLogin, allUsers, setAllUsers }) {
+function NoUser() {
 	const [loginOrRegister, setLoginOrRegister] = useState(true);
 	return (
 		<main className='login'>
 			{loginOrRegister ? (
-				<LoginForm
-					setUserLogin={setUserLogin}
-					setLoginOrRegister={setLoginOrRegister}
-					allUsers={allUsers}
-				/>
+				<LoginForm setLoginOrRegister={setLoginOrRegister} />
 			) : (
-				<RegisterForm
-					setLoginOrRegister={setLoginOrRegister}
-					allUsers={allUsers}
-					setAllUsers={setAllUsers}
-				/>
+				<RegisterForm setLoginOrRegister={setLoginOrRegister} />
 			)}
 		</main>
 	);

@@ -1,6 +1,9 @@
 import Input from './Input';
+import { useOutletContext } from 'react-router-dom';
 
-function LoginForm({ setUserLogin, setLoginOrRegister, allUsers }) {
+function LoginForm({ setLoginOrRegister }) {
+	const { setUserLogin, allUsers } = useOutletContext();
+
 	// Loginkontrollen
 	const checkLogin = (event) => {
 		event.preventDefault();

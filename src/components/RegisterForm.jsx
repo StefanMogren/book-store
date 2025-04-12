@@ -1,7 +1,9 @@
-import React, { useEffect } from 'react';
 import Input from './Input';
+import { useOutletContext } from 'react-router-dom';
 
-function RegisterForm({ setLoginOrRegister, allUsers, setAllUsers }) {
+function RegisterForm({ setLoginOrRegister }) {
+	const { allUsers, setAllUsers } = useOutletContext();
+
 	const registerUser = (event) => {
 		event.preventDefault();
 		const formElements = event.target.elements;
@@ -26,9 +28,6 @@ function RegisterForm({ setLoginOrRegister, allUsers, setAllUsers }) {
 			console.log('New user registered!');
 		}
 	};
-	useEffect(() => {
-		console.log(allUsers);
-	}, [allUsers]);
 
 	return (
 		<>

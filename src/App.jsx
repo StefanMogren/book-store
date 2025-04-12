@@ -1,4 +1,3 @@
-import NoUser from './components/NoUser';
 import BookStore from './components/BookStore';
 import { useState } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
@@ -8,7 +7,6 @@ import RootLayout from './components/RootLayout';
 
 function App() {
 	const [allUsers, setAllUsers] = useState([]);
-	const [userLogin, setUserLogin] = useState(true);
 
 	if (allUsers.length < 1) {
 		setAllUsers(users);
@@ -31,25 +29,11 @@ function App() {
 		},
 	]);
 
-	const initialization = () => {
-		if (userLogin) {
-			return (
-				<>
-					<RouterProvider router={router} />
-				</>
-			);
-		} else {
-			return (
-				<NoUser
-					setUserLogin={setUserLogin}
-					allUsers={allUsers}
-					setAllUsers={setAllUsers}
-				/>
-			);
-		}
-	};
-
-	return <div className='app'>{initialization()}</div>;
+	return (
+		<div className='app'>
+			<RouterProvider router={router} />
+		</div>
+	);
 }
 
 export default App;
