@@ -1,5 +1,7 @@
-function Cart({ cartAmount }) {
-	// const {cartAmount} = useOutletContext();
+import { useOutletContext } from 'react-router-dom';
+
+function Cart() {
+	const { cartAmount } = useOutletContext();
 	return (
 		<button className='header__cart-button'>
 			Cart

@@ -5,6 +5,10 @@ import { useFetch } from '../hooks/useFetch';
 
 function RootLayout() {
 	const [cartAmount, setCartAmount] = useState(0);
+	const [allUsers, setAllUsers] = useState([]);
+	const [userLogin, setUserLogin] = useState(true);
+
+	console.log(allUsers);
 
 	const {
 		data: books,
@@ -17,7 +21,6 @@ function RootLayout() {
 
 	return (
 		<>
-			<Header cartAmount={cartAmount} />
 			{books && (
 				<Outlet
 					context={{
@@ -26,6 +29,10 @@ function RootLayout() {
 						books,
 						isLoading,
 						isError,
+						allUsers,
+						setAllUsers,
+						userLogin,
+						setUserLogin,
 					}}
 				/>
 			)}

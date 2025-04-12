@@ -1,4 +1,3 @@
-import Counter from './Counter';
 import { useFetch } from '../hooks/useFetch';
 import BookItem from './BookItem';
 import { useParams } from 'react-router-dom';
@@ -31,6 +30,7 @@ function BookPage() {
 
 	return (
 		<>
+			<Header />
 			{book && (
 				<BookItem
 					id={book.id}

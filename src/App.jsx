@@ -9,22 +9,13 @@ import RootLayout from './components/RootLayout';
 
 function App() {
 	// const [cartAmount, setCartAmount] = useState(0);
+	// const { allUsers, setAllUsers } = useOutletContext();
+
 	const [allUsers, setAllUsers] = useState([]);
+	const [userLogin, setUserLogin] = useState(true);
 
 	if (allUsers.length < 1) {
 		setAllUsers(users);
-	}
-
-	//Ska vara false
-	const [userLogin, setUserLogin] = useState(true);
-
-	{
-		/* <BookStore
-		userLogin={userLogin}
-		setUserLogin={setUserLogin}
-		cartAmount={cartAmount}
-		setCartAmount={setCartAmount}
-	/>; */
 	}
 
 	const router = createBrowserRouter([
@@ -50,7 +41,6 @@ function App() {
 				<>
 					<RouterProvider router={router} />
 				</>
-				// <BookStore  />
 			);
 		} else {
 			return (
