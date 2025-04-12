@@ -1,6 +1,9 @@
+import { useOutletContext } from 'react-router-dom';
 import { useState } from 'react';
 
-function Counter({ setCartAmount }) {
+function Counter() {
+	const { setCartAmount } = useOutletContext();
+
 	const [bookAmount, setBookAmount] = useState(0);
 
 	const addBook = () => {

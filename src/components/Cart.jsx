@@ -1,4 +1,5 @@
 function Cart({ cartAmount }) {
+	// const {cartAmount} = useOutletContext();
 	return (
 		<button className='header__cart-button'>
 			Cart

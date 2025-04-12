@@ -1,18 +1,17 @@
 import Header from './Header';
-import Main from './Main';
-import { useState } from 'react';
+// import { useState } from 'react';
+import BookList from './BookList';
+import { useOutletContext } from 'react-router-dom';
+// import { useFetch } from '../hooks/useFetch';
 
-function BookStore({ userLogin, setUserLogin }) {
-	const [cartAmount, setCartAmount] = useState(0);
+function BookStore() {
+	const { books } = useOutletContext();
+
+	console.log(books);
 
 	return (
 		<>
-			<Header
-				cartAmount={cartAmount}
-				userLogin={userLogin}
-				setUserLogin={setUserLogin}
-			/>
-			<Main setCartAmount={setCartAmount} />
+			<BookList books={books} />
 		</>
 	);
 }

@@ -42,7 +42,7 @@ function LoginForm({ setUserLogin, setLoginOrRegister, allUsers }) {
 					spanClass='login__label-text'
 				/>
 				<Input
-					inputType='text'
+					inputType='password'
 					inputName='password'
 					inputId='password'
 					// inputValue=

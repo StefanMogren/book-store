@@ -76,6 +76,11 @@
 	gap: 1rem;
 }
 
+.link {
+	text-decoration: none;
+	color: black;
+}
+
 .main__book-item {
 	width: 250px;
 	display: flex;
@@ -178,7 +183,3 @@
 .login__change-form {
 	cursor: pointer;
 }
-
-/* .login__label-text {
-}
- */

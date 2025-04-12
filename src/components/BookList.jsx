@@ -1,21 +1,26 @@
 import BookItem from './BookItem';
-import books from '../data/books.json';
+// import books from '../data/books.json';
 
-function BookList({ setCartAmount }) {
+function BookList({ setCartAmount, books }) {
+	const bookItems = () => {
+		return books.map((book) => {
+			return (
+				<BookItem
+					key={book.id}
+					id={book.id}
+					title={book.title}
+					author={book.author}
+					description={book.about}
+					setCartAmount={setCartAmount}
+				/>
+			);
+		});
+	};
+
 	return (
-		<ul className='main__book-list'>
-			{books.map((book, index) => {
-				return (
-					<BookItem
-						key={index}
-						title={book.title}
-						author={book.author}
-						description={book.desc}
-						setCartAmount={setCartAmount}
-					/>
-				);
-			})}
-		</ul>
+		<main>
+			<ul className='main__book-list'>{bookItems()}</ul>
+		</main>
 	);
 }
 
